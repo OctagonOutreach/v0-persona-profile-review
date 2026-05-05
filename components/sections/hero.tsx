@@ -34,6 +34,18 @@ export function Hero() {
         animate="visible"
         className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-center"
       >
+        {/* Urgency Badge */}
+        <motion.div
+          variants={fadeInUp}
+          className="mb-6 inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-2 rounded-full text-sm font-semibold"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Only 5 Spots Left This Month
+        </motion.div>
+
         {/* Headline */}
         <motion.h1
           variants={fadeInUp}

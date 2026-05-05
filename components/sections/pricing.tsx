@@ -68,6 +68,13 @@ export function Pricing() {
           Choose the package that fits your growth goals. All packages include our 
           90-day money-back guarantee.
         </p>
+        <div className="mt-4 inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Only 5 Spots Left This Month
+        </div>
       </motion.div>
 
       {/* Pricing Cards */}

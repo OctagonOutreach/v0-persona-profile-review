@@ -3,48 +3,48 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Octagon Outreach Dark Theme */
+/* Octagon Outreach Dark Theme - Red, Black, White */
 :root {
-  /* Core Colors - Dark Theme (default) */
-  --background: #0A0A0A;
-  --foreground: #FAFAFA;
+  /* Core Colors - Pure Black Base */
+  --background: #000000;
+  --foreground: #FFFFFF;
   
   /* Card Colors with Glass Effect Base */
-  --card: rgba(24, 24, 27, 0.6);
-  --card-foreground: #FAFAFA;
+  --card: rgba(15, 15, 15, 0.8);
+  --card-foreground: #FFFFFF;
   
   /* Popover */
-  --popover: #18181B;
-  --popover-foreground: #FAFAFA;
+  --popover: #0A0A0A;
+  --popover-foreground: #FFFFFF;
   
-  /* Primary - Accent Red (CTAs, highlights) */
-  --primary: #E53E3E;
+  /* Primary - Bold Red (CTAs, highlights) */
+  --primary: #DC2626;
   --primary-foreground: #FFFFFF;
   
-  /* Secondary */
-  --secondary: #27272A;
-  --secondary-foreground: #A1A1AA;
+  /* Secondary - Dark with red tint */
+  --secondary: #1A0A0A;
+  --secondary-foreground: #E5E5E5;
   
-  /* Muted */
-  --muted: #18181B;
-  --muted-foreground: #71717A;
+  /* Muted - Dark grays */
+  --muted: #0F0F0F;
+  --muted-foreground: #A3A3A3;
   
   /* Accent - Same as primary */
-  --accent: #E53E3E;
+  --accent: #DC2626;
   --accent-foreground: #FFFFFF;
   
   /* Destructive */
-  --destructive: #DC2626;
+  --destructive: #B91C1C;
   --destructive-foreground: #FFFFFF;
   
-  /* Border */
-  --border: rgba(63, 63, 70, 0.5);
+  /* Border - Subtle red tint */
+  --border: rgba(220, 38, 38, 0.15);
   
   /* Input */
-  --input: #27272A;
+  --input: #0F0F0F;
   
   /* Ring - Focus states */
-  --ring: #E53E3E;
+  --ring: #DC2626;
   
   /* Chart Colors */
   --chart-1: #E53E3E;
@@ -137,18 +137,18 @@
   }
 
   .glass-card-hover:hover {
-    @apply border-primary/30;
+    @apply border-primary/40;
     box-shadow: 
-      0 0 0 1px rgba(229, 62, 62, 0.1),
-      0 0 20px rgba(229, 62, 62, 0.15),
-      0 8px 16px -4px rgba(0, 0, 0, 0.4);
+      0 0 0 1px rgba(220, 38, 38, 0.2),
+      0 0 25px rgba(220, 38, 38, 0.2),
+      0 8px 16px -4px rgba(0, 0, 0, 0.6);
     transform: translateY(-2px);
   }
 
   /* CTA Pulse Animation */
   @keyframes subtle-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.4); }
-    50% { box-shadow: 0 0 0 8px rgba(229, 62, 62, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
+    50% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
   }
 
   .cta-pulse {
