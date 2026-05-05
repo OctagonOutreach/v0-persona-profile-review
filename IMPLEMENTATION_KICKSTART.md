@@ -264,7 +264,7 @@ const staggerContainer = {
 
 **Modal Content:**
 - Heading: "Let's Grow Your Gym"
-- Subheading: "Fill out the form below and we'll reach out within 24 hours"
+- Subheading: "Fill out the form below and Gunner will reach out within 24 hours"
 - Form fields:
   - Full Name (required)
   - Gym Name (required)
@@ -274,6 +274,7 @@ const staggerContainer = {
   - Interested Package (radio: Bronze $2,499 / Silver $4,999 / Gold $5,999)
   - Message (optional textarea)
 - Submit button: "Send My Application"
+- Form submission: Sends to OctagonOutreach@gmail.com
 - Close button (X) top right
 
 **Modal Behavior:**
@@ -343,7 +344,7 @@ const staggerContainer = {
 | Image | Purpose | Generation Prompt | Size |
 |-------|---------|-------------------|------|
 | `hero-placeholder.jpg` | Hero section background/accent | "Professional MMA gym interior, dramatic lighting, red accent lights, modern equipment, dark moody atmosphere, cinematic" | 1920x1080 |
-| `story-placeholder.jpg` | Founder story section | "MMA fighter training in gym, punching bag, determined expression, dramatic side lighting, dark background, professional sports photography" | 800x600 |
+| `story-placeholder.jpg` | Founder story section (Gunner Busic) | "MMA fighter training in gym, punching bag, determined expression, dramatic side lighting, dark background, professional sports photography" | 800x600 |
 | `og-image.jpg` | Social sharing | "Octagon Outreach logo on dark background with red accent, MMA themed, professional, modern" | 1200x630 |
 
 **Note:** These are placeholders. User will replace with actual photos later.
@@ -367,7 +368,7 @@ export const metadata: Metadata = {
     "gym Facebook ads",
     "MMA SEO"
   ],
-  authors: [{ name: "Octagon Outreach" }],
+  authors: [{ name: "Gunner Busic" }, { name: "Octagon Outreach" }],
   openGraph: {
     title: "Octagon Outreach | 40 New MMA Students in 90 Days",
     description: "Proven marketing systems for MMA gyms. Money-back guarantee.",
@@ -411,6 +412,27 @@ export const viewport: Viewport = {
 - CLS: < 0.1
 - Image optimization via Next.js Image component
 - Font optimization via next/font
+
+---
+
+## FOUNDER STORY CONTENT (Gunner Busic)
+
+**Section Heading:** "Why I Started Octagon Outreach"
+
+**Story Copy:**
+> I've been training MMA since I was 5 years old. The gym wasn't just where I trained—it was my second home, my community, my family.
+>
+> Then I watched it all fall apart.
+>
+> First, my boxing gym closed. Then my jiu-jitsu gym. Both had world-class coaches. Both had loyal students. Neither could bring in enough new members to keep the lights on.
+>
+> Seeing my coaches—people who dedicated their lives to the craft—forced to shut down because they didn't have marketing resources broke my heart.
+>
+> That's why I built Octagon Outreach. Not as another generic marketing agency, but as a lifeline for MMA gyms built by someone who actually understands the community.
+>
+> I'm betting my entire business on one promise: 40 new students in 90 days, or you pay nothing.
+>
+> — Gunner Busic, Founder
 
 ---
 
@@ -518,21 +540,21 @@ pnpm add framer-motion lucide-react
 
 ---
 
-## OUTSTANDING QUESTIONS FOR USER
+## CONFIRMED DETAILS
 
-Before implementation, confirm:
-
-1. **Domain:** Is `octagonoutreach.com` the target domain?
-2. **Contact email:** Where should form submissions be sent?
-3. **Calendar tool:** Calendly link, or handle via email?
-4. **Your name:** What name should appear as the founder?
-5. **Photo:** Do you have photos, or should I generate placeholders for now?
+| Item | Value |
+|------|-------|
+| **Founder Name** | Gunner Busic |
+| **Contact Email** | OctagonOutreach@gmail.com |
+| **Call Booking** | Via email (no Calendly) |
+| **Images** | Generate placeholders now |
+| **Domain** | TBD (deploy to Vercel) |
 
 ---
 
 ## READY FOR IMPLEMENTATION
 
-This plan is complete and ready for the build phase. All specifications are defined:
+All specifications are confirmed and ready for the build phase:
 
 - Design tokens and color system
 - Glass card effects
