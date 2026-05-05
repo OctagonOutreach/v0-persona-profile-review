@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
-import { Octagon } from "lucide-react"
 import { MobileMenu } from "./mobile-menu"
 import { CTAButton } from "@/components/ui/cta-button"
 
@@ -40,10 +40,15 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Octagon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
-            <span className="text-xl font-bold text-foreground">
-              Octagon<span className="text-primary">Outreach</span>
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Octagon Outreach"
+              width={140}
+              height={40}
+              className="h-10 w-auto invert brightness-0 saturate-100 transition-transform duration-300 group-hover:scale-105"
+              style={{ filter: "invert(1) brightness(2)" }}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
