@@ -151,7 +151,6 @@ export function ConsultationModal() {
                   </Select>
                 </div>
                 
-<input type="hidden" name="memberCount" value="50-100" />
                 
                 <div className="space-y-3">
                   <Label>Interested Package</Label>
