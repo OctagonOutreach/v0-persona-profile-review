@@ -44,8 +44,6 @@ export function ConsultationModal() {
     return () => window.removeEventListener("keydown", handleEscape)
   }, [isOpen, closeModal])
 
-  }
-
   return (
     <AnimatePresence>
       {isOpen && (
