@@ -8,14 +8,6 @@ import { GlassCard } from "@/components/ui/glass-card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
-} from "@/components/ui/select"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Button } from "@/components/ui/button"
 
 export function ConsultationModal() {
@@ -67,6 +59,7 @@ export function ConsultationModal() {
             className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-50 md:w-full md:max-w-lg overflow-auto"
           >
             <GlassCard className="p-6 md:p-8 max-h-[90vh] overflow-y-auto">
+              
               {/* Close Button */}
               <button
                 onClick={closeModal}
@@ -87,115 +80,72 @@ export function ConsultationModal() {
               </div>
 
               {/* Form */}
-              <form action="https://formspree.io/f/xgodynad" method="POST" className="space-y-4">
+              <form
+                action="https://formspree.io/f/xgodynad"
+                method="POST"
+                className="space-y-4"
+              >
+                
+                {/* Name + Gym */}
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="fullName">Full Name *</Label>
-                    <Input 
-                      id="fullName" 
-                      name="fullName" 
-                      required 
-                      placeholder="John Smith"
-                      className="bg-input border-border"
-                    />
+                    <Label>Full Name *</Label>
+                    <Input name="fullName" required placeholder="John Smith" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="gymName">Gym Name *</Label>
-                    <Input 
-                      id="gymName" 
-                      name="gymName" 
-                      required 
-                      placeholder="Iron Fist MMA"
-                      className="bg-input border-border"
-                    />
+                    <Label>Gym Name *</Label>
+                    <Input name="gymName" required placeholder="Iron Fist MMA" />
                   </div>
                 </div>
 
+                {/* Email + Phone */}
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input 
-                      id="email" 
-                      name="email" 
-                      type="email" 
-                      required 
-                      placeholder="john@gym.com"
-                      className="bg-input border-border"
-                    />
+                    <Label>Email *</Label>
+                    <Input name="email" type="email" required placeholder="john@gym.com" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone *</Label>
-                    <Input 
-                      id="phone" 
-                      name="phone" 
-                      type="tel" 
-                      required 
-                      placeholder="(555) 123-4567"
-                      className="bg-input border-border"
-                    />
+                    <Label>Phone *</Label>
+                    <Input name="phone" type="tel" required placeholder="(555) 123-4567" />
                   </div>
                 </div>
 
+                {/* Member Count (FIXED REAL HTML SELECT) */}
                 <div className="space-y-2">
-                  <Label htmlFor="memberCount">Current Member Count</Label>
-                  <Select name="memberCount" defaultValue="50-100">
-                    <SelectTrigger className="bg-input border-border">
-                      <SelectValue placeholder="Select range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="<50">Less than 50</SelectItem>
-                      <SelectItem value="50-100">50 - 100</SelectItem>
-                      <SelectItem value="100-200">100 - 200</SelectItem>
-                      <SelectItem value="200+">200+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                
-                <div className="space-y-3">
-                  <Label>Interested Package</Label>
-                  <RadioGroup name="package" defaultValue="silver" className="space-y-2">
-                    <div className="flex items-center space-x-3 p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors">
-                      <RadioGroupItem value="bronze" id="bronze" />
-                      <Label htmlFor="bronze" className="cursor-pointer flex-1">
-                        <span className="font-semibold">Bronze</span>
-                        <span className="text-muted-foreground ml-2">$2,499 - 30 students</span>
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-3 p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors border border-primary/30">
-                      <RadioGroupItem value="silver" id="silver" />
-                      <Label htmlFor="silver" className="cursor-pointer flex-1">
-                        <span className="font-semibold">Silver</span>
-                        <span className="text-muted-foreground ml-2">$4,999 - 40 students</span>
-                        <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded">Popular</span>
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-3 p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors">
-                      <RadioGroupItem value="gold" id="gold" />
-                      <Label htmlFor="gold" className="cursor-pointer flex-1">
-                        <span className="font-semibold">Gold</span>
-                        <span className="text-muted-foreground ml-2">$5,999 - 50 students</span>
-                      </Label>
-                    </div>
-                  </RadioGroup>
+                  <Label>Current Member Count</Label>
+
+                  <select
+                    name="memberCount"
+                    className="bg-input border-border w-full h-10 rounded-md px-3"
+                  >
+                    <option value="<50">Less than 50</option>
+                    <option value="50-100">50 - 100</option>
+                    <option value="100-200">100 - 200</option>
+                    <option value="200+">200+</option>
+                  </select>
                 </div>
 
+                {/* Package (safe hidden field for Formspree) */}
+                <input type="hidden" name="package" value="silver" />
+
+                {/* Message */}
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message (Optional)</Label>
-                  <Textarea 
-                    id="message" 
-                    name="message" 
+                  <Label>Message (Optional)</Label>
+                  <Textarea
+                    name="message"
                     placeholder="Tell us about your gym and goals..."
-                    className="bg-input border-border min-h-[80px]"
+                    className="min-h-[80px]"
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
+                {/* Submit */}
+                <Button
+                  type="submit"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6"
                 >
                   Send My Application
                 </Button>
+
               </form>
             </GlassCard>
           </motion.div>
