@@ -44,25 +44,6 @@ export function ConsultationModal() {
     return () => window.removeEventListener("keydown", handleEscape)
   }, [isOpen, closeModal])
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    const data = Object.fromEntries(formData)
-    
-    // Create mailto link
-    const subject = encodeURIComponent(`New Inquiry from ${data.fullName} - ${data.gymName}`)
-    const body = encodeURIComponent(
-      `Name: ${data.fullName}\n` +
-      `Gym: ${data.gymName}\n` +
-      `Email: ${data.email}\n` +
-      `Phone: ${data.phone}\n` +
-      `Current Members: ${data.memberCount}\n` +
-      `Package Interest: ${data.package}\n` +
-      `Message: ${data.message || "N/A"}`
-    )
-    
-    window.location.href = `mailto:OctagonOutreach@gmail.com?subject=${subject}&body=${body}`
-    closeModal()
   }
 
   return (
@@ -108,7 +89,7 @@ export function ConsultationModal() {
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form action="https://formspree.io/f/xgodynad" method="POST" className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="fullName">Full Name *</Label>
@@ -171,7 +152,9 @@ export function ConsultationModal() {
                     </SelectContent>
                   </Select>
                 </div>
-
+                
+<input type="hidden" name="memberCount" value="50-100" />
+                
                 <div className="space-y-3">
                   <Label>Interested Package</Label>
                   <RadioGroup name="package" defaultValue="silver" className="space-y-2">
