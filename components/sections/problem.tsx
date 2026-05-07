@@ -32,25 +32,25 @@ const problems = [
 
 export function Problem() {
   return (
-    <SectionWrapper id="problem" aria-label="The Problem" stagger>
+    <SectionWrapper id="problem" aria-label="Common challenges MMA gym owners face" stagger>
       {/* Header */}
-      <motion.div variants={fadeInUp} className="text-center mb-12 md:mb-16">
+      <motion.header variants={fadeInUp} className="text-center mb-12 md:mb-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">
           <span className="text-foreground">Sound </span>
           <span className="text-primary">Familiar?</span>
         </h2>
         <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
-          Most MMA gym owners face the same struggles. {"You're"} not alone.
+          Most MMA gym owners face the same marketing challenges. {"You're"} not alone.
         </p>
-      </motion.div>
+      </motion.header>
 
       {/* Problem Cards */}
-      <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+      <ul className="grid md:grid-cols-2 gap-6 lg:gap-8" role="list">
         {problems.map((problem, index) => (
-          <motion.div key={problem.title} variants={fadeInUp} custom={index}>
+          <motion.li key={problem.title} variants={fadeInUp} custom={index} className="list-none">
             <GlassCard className="p-6 md:p-8 h-full">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 rounded-lg bg-primary/10">
+              <article className="flex items-start gap-4">
+                <div className="flex-shrink-0 p-3 rounded-lg bg-primary/10" aria-hidden="true">
                   <problem.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -61,11 +61,11 @@ export function Problem() {
                     {problem.description}
                   </p>
                 </div>
-              </div>
+              </article>
             </GlassCard>
-          </motion.div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
 
       {/* CTA */}
       <motion.div variants={fadeInUp} className="mt-12 text-center">
