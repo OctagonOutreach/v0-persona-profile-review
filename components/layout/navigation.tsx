@@ -8,7 +8,6 @@ import { MobileMenu } from "./mobile-menu"
 import { CTAButton } from "@/components/ui/cta-button"
 
 const navLinks = [
-  { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ]
@@ -41,12 +40,11 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/images/logo.png"
+              src="/images/header-logo.png"
               alt="Octagon Outreach"
-              width={140}
-              height={40}
-              className="h-10 w-auto invert brightness-0 saturate-100 transition-transform duration-300 group-hover:scale-105"
-              style={{ filter: "invert(1) brightness(2)" }}
+              width={160}
+              height={56}
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
               priority
             />
           </Link>
