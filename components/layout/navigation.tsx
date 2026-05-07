@@ -38,10 +38,10 @@ export function Navigation() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group" aria-label="Octagon Outreach - Home">
             <Image
               src="/images/header-logo.png"
-              alt="Octagon Outreach"
+              alt="Octagon Outreach - MMA gym marketing specialists"
               width={160}
               height={56}
               className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
@@ -50,7 +50,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -62,7 +62,7 @@ export function Navigation() {
               </Link>
             ))}
             <CTAButton size="sm">Get Started</CTAButton>
-          </div>
+          </nav>
 
           {/* Mobile Menu Button */}
           <MobileMenu 

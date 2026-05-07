@@ -8,11 +8,11 @@ import { fadeInUp } from "@/lib/animations"
 
 export function FinalCTA() {
   return (
-    <SectionWrapper aria-label="Get Started" className="bg-muted/30">
-      <motion.div variants={fadeInUp} className="text-center max-w-3xl mx-auto">
+    <SectionWrapper id="get-started" aria-label="Schedule your free MMA gym marketing consultation" className="bg-muted/30">
+      <motion.article variants={fadeInUp} className="text-center max-w-3xl mx-auto">
         {/* Headline */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance mb-6">
-          <span className="text-foreground">Ready to Fill Your Gym with </span>
+          <span className="text-foreground">Ready to Fill Your MMA Gym with </span>
           <span className="text-primary">New Students?</span>
         </h2>
 
@@ -32,7 +32,7 @@ export function FinalCTA() {
         <p className="mt-6 text-sm text-muted-foreground">
           90-day money-back guarantee. No contracts. Cancel anytime.
         </p>
-      </motion.div>
+      </motion.article>
     </SectionWrapper>
   )
 }
