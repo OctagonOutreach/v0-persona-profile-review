@@ -8,7 +8,7 @@ import { Story } from "@/components/sections/story"
 import { HowItWorks } from "@/components/sections/how-it-works"
 import { Guarantee } from "@/components/sections/guarantee"
 import { FAQ } from "@/components/sections/faq"
-import { FinalCTA } from "@/components/sections/final-cta"
+import { FinalCTA } from "@/components/sections/final-cta" 
 
 export default function Home() {
   return (
