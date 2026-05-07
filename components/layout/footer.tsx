@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Octagon } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,7 +11,13 @@ export function Footer() {
           {/* Logo & Copyright */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Octagon className="h-6 w-6 text-primary" />
+              <Image 
+                src="/images/logo.png" 
+                alt="Octagon Outreach Logo" 
+                width={32} 
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="text-lg font-bold text-foreground">
                 Octagon<span className="text-primary">Outreach</span>
               </span>
@@ -23,12 +29,6 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link 
-              href="#pricing" 
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Pricing
-            </Link>
             <Link 
               href="#faq" 
               className="text-muted-foreground hover:text-foreground transition-colors"

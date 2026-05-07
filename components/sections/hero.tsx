@@ -94,7 +94,7 @@ export function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/50 flex items-start justify-center p-1">
           <div className="w-1.5 h-3 bg-muted-foreground/50 rounded-full" />
