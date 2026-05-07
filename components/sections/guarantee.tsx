@@ -9,14 +9,14 @@ import { fadeInUp } from "@/lib/animations"
 
 export function Guarantee() {
   return (
-    <SectionWrapper aria-label="Our Guarantee" className="bg-muted/30">
-      <motion.div variants={fadeInUp} className="max-w-3xl mx-auto">
+    <SectionWrapper id="guarantee" aria-label="Our 90-day money-back guarantee for MMA gym marketing" className="bg-muted/30">
+      <motion.article variants={fadeInUp} className="max-w-3xl mx-auto">
         <GlassCard className="p-8 md:p-12 text-center relative overflow-hidden">
           {/* Background Glow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" aria-hidden="true" />
 
           {/* Shield Icon */}
-          <div className="relative mb-6 inline-flex p-4 rounded-full bg-primary/10">
+          <div className="relative mb-6 inline-flex p-4 rounded-full bg-primary/10" aria-hidden="true">
             <Shield className="h-12 w-12 text-primary" />
           </div>
 
@@ -53,11 +53,11 @@ export function Guarantee() {
 
           {/* CTA */}
           <CTAButton size="lg" pulse className="relative group">
-            {"I'm"} Ready to Grow
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            {"I'm"} Ready to Grow My MMA Gym
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </CTAButton>
         </GlassCard>
-      </motion.div>
+      </motion.article>
     </SectionWrapper>
   )
 }

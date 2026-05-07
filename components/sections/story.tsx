@@ -7,21 +7,23 @@ import { fadeInUp, slideInFromLeft, slideInFromRight } from "@/lib/animations"
 
 export function Story() {
   return (
-    <SectionWrapper aria-label="Our Story" className="bg-muted/30">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <SectionWrapper id="about" aria-label="About Octagon Outreach and founder Gunner Busic" className="bg-muted/30">
+      <article className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Image */}
-        <motion.div 
+        <motion.figure 
           variants={slideInFromLeft} 
           className="relative aspect-[4/3] rounded-2xl overflow-hidden"
         >
           <Image
             src="/images/story-placeholder.jpg"
-            alt="Gunner Busic - Founder of Octagon Outreach"
+            alt="Gunner Busic, founder of Octagon Outreach, lifelong MMA practitioner and marketing expert for martial arts gyms"
             fill
             className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" aria-hidden="true" />
+          <figcaption className="sr-only">Gunner Busic - Founder of Octagon Outreach</figcaption>
+        </motion.figure>
 
         {/* Content */}
         <motion.div variants={slideInFromRight} className="space-y-6">
@@ -66,7 +68,7 @@ export function Story() {
             </p>
           </div>
         </motion.div>
-      </div>
+      </article>
     </SectionWrapper>
   )
 }

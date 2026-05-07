@@ -8,7 +8,6 @@ import { MobileMenu } from "./mobile-menu"
 import { CTAButton } from "@/components/ui/cta-button"
 
 const navLinks = [
-  { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ]
@@ -39,20 +38,19 @@ export function Navigation() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group" aria-label="Octagon Outreach - Home">
             <Image
-              src="/images/logo.png"
-              alt="Octagon Outreach"
-              width={140}
-              height={40}
-              className="h-10 w-auto invert brightness-0 saturate-100 transition-transform duration-300 group-hover:scale-105"
-              style={{ filter: "invert(1) brightness(2)" }}
+              src="/images/header-logo.png"
+              alt="Octagon Outreach - MMA gym marketing specialists"
+              width={160}
+              height={56}
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -64,7 +62,7 @@ export function Navigation() {
               </Link>
             ))}
             <CTAButton size="sm">Get Started</CTAButton>
-          </div>
+          </nav>
 
           {/* Mobile Menu Button */}
           <MobileMenu 

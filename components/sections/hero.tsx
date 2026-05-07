@@ -14,15 +14,19 @@ const trustBadges = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      aria-labelledby="hero-heading"
+    >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" aria-hidden="true">
         <Image
           src="/images/hero-placeholder.jpg"
-          alt="MMA gym interior"
+          alt="Professional MMA training facility with fighters practicing martial arts techniques"
           fill
           className="object-cover opacity-30"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
       </div>
@@ -48,6 +52,7 @@ export function Hero() {
 
         {/* Headline */}
         <motion.h1
+          id="hero-heading"
           variants={fadeInUp}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance"
         >
@@ -94,7 +99,7 @@ export function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/50 flex items-start justify-center p-1">
           <div className="w-1.5 h-3 bg-muted-foreground/50 rounded-full" />
