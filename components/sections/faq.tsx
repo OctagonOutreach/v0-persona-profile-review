@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Do you work with gyms outside of MMA?",
-    answer: "Currently, we're 100% focused on MMA gyms. This is where our expertise and passion lies. We may expand in the future, but right now, MMA is our entire focus."
+    answer: "Absolutely. While 'Octagon' is in our name, our systems are designed for the entire combat sports industry. We specialize in growing Brazilian Jiu-Jitsu academies and Muay Thai gyms. If your business relies on mats and memberships, we know how to fill them."
   },
   {
     question: "What if I don't see results after 60 days?",
