@@ -76,12 +76,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
   category: 'marketing',
 }
@@ -98,7 +94,7 @@ const jsonLd = {
   name: 'Octagon Outreach',
   description: 'Specialized marketing agency for MMA gyms. We deliver 40+ new students in 90 days with proven landing pages, Facebook Ads, SEO, and PPC campaigns.',
   url: 'https://octagonoutreach.com',
-  logo: 'https://octagonoutreach.com/images/logo.png',
+  logo: 'https://octagonoutreach.com/icon.png',
   image: 'https://octagonoutreach.com/images/og-image.jpg',
   email: 'OctagonOutreach@gmail.com',
   founder: {
